@@ -65,7 +65,7 @@ def execute_paginated_pipeline():
                 all_extracted_records.append(cleaned_row)
         
             current_page += 1
-            time.sleep(0.5)  # Defensive throttling backoff rate safety gap
+            time.sleep(0.5)
 
         except requests.exceptions.RequestException as connection_error:
             logging.error(f"Network connectivity dropout error encountered: {connection_error}")
